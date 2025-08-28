@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yaman — Academic Profile</title>
+  <meta name="description" content="Academic profile of Yaman: cybersecurity, threat intelligence, LLMs for network security, SOC automation, adversarial ML." />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root{
+      --bg:#ffffff; --text:#111827; --muted:#4b5563; --line:#e5e7eb; --accent:#0a66c2; --max:880px;
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text)}
+    body{font: 17px/1.6 "Source Serif 4", Georgia, serif;}
+    .container{max-width:var(--max);margin:0 auto;padding:24px}
+    /* Header */
+    header{border-bottom:1px solid var(--line);}
+    .top{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;justify-content:space-between}
+    .name{font:700 28px/1 "Inter", system-ui, -apple-system, sans-serif; letter-spacing:.2px}
+    .tag{color:var(--muted)}
+    nav{display:flex;flex-wrap:wrap;gap:16px;margin:10px 0 0}
+    nav a{color:var(--accent);text-decoration:none}
+    nav a:hover{text-decoration:underline}
+
+    /* Sections */
+    section{padding:28px 0;border-bottom:1px solid var(--line)}
+    section:last-of-type{border-bottom:none}
+    h2{font:600 20px/1.3 "Inter",system-ui,sans-serif;margin:0 0 8px}
+    .lead{color:var(--muted);max-width:70ch}
+    ul{margin:8px 0 0 1.2rem}
+    li{margin:.35rem 0}
+
+    /* Two-column about */
+    .about{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
+    .about img{width:120px;height:120px;border-radius:6px;object-fit:cover;border:1px solid var(--line)}
+    .meta{font-size:.95rem;color:var(--muted)}
+
+    /* Publication list */
+    .pub{margin:.5rem 0}
+    .pub .title{font-weight:600}
+    .pub .venue{font-style:italic}
+    .pub .links a{margin-right:.6rem}
+
+    /* Chips */
+    .chips{display:flex;flex-wrap:wrap;gap:.4rem}
+    .chip{border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;font-size:.88rem;color:var(--muted)}
+
+    /* Footer */
+    footer{padding:22px 0;color:var(--muted)}
+
+    /* Print-friendly */
+    @media print{nav, .links .btn{display:none} body{color:#000} a{color:#000;text-decoration:underline}}
+
+    @media (max-width: 760px){.about{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="top">
+        <div>
+          <div class="name">Yaman</div>
+          <div class="tag">Cybersecurity Researcher · Student</div>
+        </div>
+        <nav aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#projects">Projects</a>
+          <a href="#teaching">Teaching</a>
+          <a href="#contact">CV & Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="container about">
+        <div>
+          <h2>About</h2>
+          <p class="lead">I study the use of large language models for network security: threat‑intelligence extraction and correlation, SOC automation, and adversarial robustness. I’m especially interested in multi‑LLM routing, evaluation under drift, and practical integrations with SIEM/SOAR pipelines.</p>
+          <div class="chips" aria-label="Research areas">
+            <span class="chip">Threat Intelligence</span>
+            <span class="chip">LLMs for NetSec</span>
+            <span class="chip">Adversarial ML</span>
+            <span class="chip">SOC Automation</span>
+          </div>
+        </div>
+        <div>
+          <h2>At a Glance</h2>
+          <ul class="meta">
+            <li>Interests: LLM‑routed pipelines, RAG for TI, robust detection</li>
+            <li>Tools: Python, PyTorch, FastAPI, Docker, AWS</li>
+            <li>Currently seeking: PhD Fall 2026 / RA / internships</li>
+            <li>Location: USA (open to remote)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="container">
+        <h2>Research Interests</h2>
+        <ul>
+          <li>Automated extraction of IOCs and entities from noisy sources, with confidence scoring and linking to <span class="venue">MITRE ATT&CK</span>.</li>
+          <li>Agentic/LLM workflows for log triage, investigation hypotheses, and report drafting with guardrails.</li>
+          <li>Adversarial evaluation of detectors under evasion, poisoning, and concept drift using real telemetry (e.g., CICIDS2017).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="container">
+        <h2>Publications & Preprints</h2>
+        <div class="pub">
+          <div class="title">[2025] Paper title goes here</div>
+          <div><span class="authors">Doe, J.; Yaman; …</span> — <span class="venue">Venue</span></div>
+          <div class="links"><a href="#">PDF</a><a href="#">DOI</a><a href="#">BibTeX</a></div>
+        </div>
+        <div class="pub">
+          <div class="title">[2024] Another paper or preprint title</div>
+          <div><span class="authors">Co‑authors…</span> — <span class="venue">Workshop</span></div>
+          <div class="links"><a href="#">PDF</a><a href="#">arXiv</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2>Selected Projects</h2>
+        <ul>
+          <li><strong>LLM‑Routed Triage</strong> — Multi‑LLM router that assigns extraction/summarization/classification to the most suitable model. <a href="#">GitHub</a></li>
+          <li><strong>CICIDS2017 Lab</strong> — Reproducible IDS benchmarks with drift checks and robust metrics. <a href="#">GitHub</a></li>
+          <li><strong>SOC Co‑Pilot</strong> — RAG over playbooks/detections/tickets to assist SOC analysts. <a href="#">GitHub</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="teaching">
+      <div class="container">
+        <h2>Teaching & Service</h2>
+        <ul>
+          <li>Guest lecture: LLMs for Threat Intelligence (slides)</li>
+          <li>Reviewer: Security/ML workshop (year)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>CV & Contact</h2>
+        <p>Download my full CV and feel free to reach out for collaborations.</p>
+        <ul>
+          <li><a href="./Yaman_CV.pdf" download>Download CV (PDF)</a></li>
+          <li>Email: <a href="mailto:your.email@domain.com">your.email@domain.com</a></li>
+          <li>GitHub: <a href="https://github.com/yourhandle">github.com/yourhandle</a> · LinkedIn: <a href="https://linkedin.com/in/yourhandle">linkedin.com/in/yourhandle</a> · Scholar: <a href="https://scholar.google.com">Google Scholar</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> Yaman · Last updated <span id="updated"></span></div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Use document last modified for a subtle academic touch
+    document.getElementById('updated').textContent = new Date(document.lastModified).toLocaleDateString();
+  </script>
+</body>
+</html>
