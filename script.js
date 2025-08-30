@@ -1,5 +1,4 @@
 
-
 (function(){
   const root = document.documentElement;
   const current = localStorage.getItem('theme') || 'dark';
