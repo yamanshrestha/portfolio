@@ -1,3 +1,5 @@
+
+
 (function(){
   const root = document.documentElement;
   const current = localStorage.getItem('theme') || 'dark';
@@ -26,26 +28,82 @@
   const yearEl = document.getElementById('year');
   if(yearEl) yearEl.textContent = new Date().getFullYear();
 
-  const lines = [
-    '$ ingest indicators --source=OSINT',
-    '✓ normalized 12,348 IOCs',
-    '$ correlate --with=PCAP --window=24h',
-    '✓ 7 high‑confidence matches (T1059, T1071)',
-    '$ llm triage --policy=strict',
-    '✓ GPT‑routed → summarize + prioritize',
-    '$ export report --format=STIX',
-    '✓ saved → ./out/incident-042.json'
-  ];
+  // --- Typing terminal ---
   const term = document.getElementById('term');
   if(term){
-    let i=0;
-    setInterval(()=>{
-      i=(i+1)%lines.length;
-      const d=document.createElement('div');
-      d.textContent=lines[i];
-      term.appendChild(d);
-      term.scrollTop=term.scrollHeight;
-    }, 1400);
+    const lines = [
+      '$ whoami',
+      '> Yaman Shrestha — Cybersecurity Researcher',
+      '$ contact',
+      '> email: yamanshrestha08@gmail.com',
+      '> github: github.com/yamanshrestha',
+      '> linkedin: linkedin.com/in/yaman-shrestha',
+    ];
+
+    const opts = {
+      charDelay: 22,     // ms between characters
+      lineDelay: 500,    // pause after each line
+      cycleDelay: 1600,  // pause before restarting
+      cursorChar: '▌'
+    };
+
+    let lineIdx = 0;
+    let charIdx = 0;
+    let cursor;
+
+    function ensureCursor() {
+      if (!cursor) {
+        cursor = document.createElement('span');
+        cursor.textContent = opts.cursorChar;
+        cursor.style.marginLeft = '3px';
+        cursor.style.opacity = '1';
+        cursor.className = 'term-cursor';
+        term.appendChild(cursor);
+        setInterval(() => {
+          if (cursor) cursor.style.opacity = cursor.style.opacity === '1' ? '0' : '1';
+        }, 500);
+      }
+    }
+
+    function newLine() {
+      const div = document.createElement('div');
+      term.appendChild(div);
+      return div;
+    }
+
+    function typeNextLine() {
+      if (lineIdx >= lines.length) {
+        setTimeout(() => {
+          term.innerHTML = '';
+          cursor = null;
+          lineIdx = 0;
+          charIdx = 0;
+          typeNextLine();
+        }, opts.cycleDelay);
+        return;
+      }
+
+      const text = lines[lineIdx];
+      const row = newLine();
+      charIdx = 0;
+
+      (function typeChar(){
+        row.textContent = text.slice(0, charIdx++);
+        term.scrollTop = term.scrollHeight; // auto-scroll as we type
+        ensureCursor();
+
+        if (charIdx <= text.length) {
+          setTimeout(typeChar, opts.charDelay);
+        } else {
+          setTimeout(() => {
+            lineIdx++;
+            typeNextLine();
+          }, opts.lineDelay);
+        }
+      })();
+    }
+
+    typeNextLine();
   }
 
   document.querySelectorAll('a[href^="#"]').forEach(a=>{
