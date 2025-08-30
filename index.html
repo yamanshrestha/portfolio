@@ -14,7 +14,7 @@
 <body>
   <header role="banner">
     <div class="container nav" aria-label="Primary">
-      <div class="brand"><span class="dot" aria-hidden="true"></span><h3>Yaman<span style="opacity:.6">| Cybersecurity</h3></span></div>
+      <div class="brand"><span class="dot" aria-hidden="true"></span><h2>Yaman<span style="opacity:.6">|Cybersecurity</h2></span></div>
       <button class="menu-toggle btn ghost" aria-controls="nav-menu" aria-expanded="false" id="menuBtn">Menu</button>
       <nav>
         <ul id="nav-menu" aria-label="Section links">
@@ -23,12 +23,12 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#publications">Publications</a></li>
           <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <!-- <li><a href="#contact">Contact</a></li> -->
         </ul>
       </nav>
       <div class="controls">
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">🌙</button>
-        <a class="btn" href="#contact">Hire Me</a>
+        <a class="btn" href="#contact">Connect with Me</a>
       </div>
     </div>
   </header>
@@ -38,13 +38,13 @@
       <div>
         <span class="eyebrow"><span class="status" aria-hidden="true"></span> Open to research collaborations</span>
         <h1>Cybersecurity Researcher & Student</h1>
-        <p class="subtitle">I design and evaluate AI‑assisted defenses for modern networks — from threat intelligence pipelines powered by LLMs to SOC automation and adversarial ML research.</p>
+        <p class="subtitle">Research Assistant at University of Central Missouri, focusing on LLM-based threat detection, SOC, and cybersecurity policy for critical infrastructure.</p>
         <div class="cta">
           <a class="btn primary" href="#projects">View Projects</a>
-          <a class="btn" href="./Yaman_CV.pdf" download>Download CV</a>
+          <a class="btn" href="./Yaman Shrestha.pdf" download>Download CV</a>
           <a class="btn ghost" href="#publications">Publications</a>
         </div>
-        <p class="currently-exploring">Currently exploring: <span class="kbd">LLM‑for‑Threat‑Intel</span> • <span class="kbd">RAG</span> • <span class="kbd">Network telemetry</span></p>
+        <p class="currently-exploring">Currently exploring: <span class="kbd">LLM‑for‑Threat‑Intelligence</span> • <span class="kbd">IoT Fingerprinting</span> • <span class="kbd">Network Security</span></p>
       </div>
       <div>
         <div class="terminal-card" aria-label="Animated terminal">
@@ -52,15 +52,15 @@
             <span class="term-dot danger"></span>
             <span class="term-dot warn"></span>
             <span class="term-dot ok"></span>
-            <span class="term-path">/opt/soc/defense ▶ tail -f intel.log</span>
+            <span class="term-path">~/yaman/cyber/server ▶ tail -f skills.log</span>
           </div>
           <div class="term-body" id="term">
-            <div>$ ingest indicators --source=OSINT</div>
-            <div>✓ normalized 12,348 IOCs</div>
-            <div>$ correlate --with=PCAP --window=24h</div>
-            <div>✓ 7 high‑confidence matches (T1059, T1071)</div>
-            <div>$ llm triage --policy=strict</div>
-            <div>✓ GPT‑routed → summarize + prioritize</div>
+            <div>$ whoami</div>
+            <div>> Yaman Shrestha — Cybersecurity Researcher</div>
+            <div>$ contact</div>
+            <div>> email: yamanshrestha08@gmail.com</div>
+            <div>> github: github.com/yamanshrestha</div>
+            <div>> linkedin: linkedin.com/in/yaman-shrestha</div>
           </div>
         </div>
       </div>
@@ -73,9 +73,9 @@
       <p class="lead">My work sits at the intersection of security operations and applied machine learning. I prototype multi‑LLM routing for threat intel, evaluate detection under adversarial drift, and build reproducible pipelines.</p>
       <div class="grid cols-4 grid-responsive">
         <div class="card"><h3>Threat Intelligence</h3><p>Automated IOC extraction, entity linking, and confidence scoring across noisy sources.</p><div class="chips"><span class="chip">MITRE ATT&CK</span><span class="chip">STIX/TAXII</span></div></div>
-        <div class="card"><h3>LLMs for NetSec</h3><p>Agentic workflows for log triage, hypothesis gen, and report drafting with guardrails.</p><div class="chips"><span class="chip">RAG</span><span class="chip">Routing</span></div></div>
-        <div class="card"><h3>Adversarial ML</h3><p>Stress‑testing models under evasions, poisoning, and concept drift in real telemetry.</p><div class="chips"><span class="chip">Red‑teaming</span><span class="chip">Robustness</span></div></div>
-        <div class="card"><h3>SOC Automation</h3><p>Playbooks that translate detections → actions with human‑in‑the‑loop approvals.</p><div class="chips"><span class="chip">SIEM</span><span class="chip">SOAR</span></div></div>
+        <div class="card"><h3>LLMs for Cybersecurity</h3><p>IoT fingerprinting, host identification, fine-tuning LLaMA models, explainable AI, ABC optimization</p><div class="chips"><span class="chip">Finetuning</span><span class="chip">AI Agents</span></div></div>
+        <div class="card"><h3>Network Security and Forensics</h3><p>Packet analysis with Wireshark, Tcpdump, Tshark, Scapy</p><div class="chips"><span class="chip">Blue‑teaming</span><span class="chip">Robustness</span></div></div>
+        <div class="card"><h3>Cybersecurity Policy & Risk</h3><p>NIST Frameworks, ICS policies, CAIQ and SIG Questionnaires</p><div class="chips"><span class="chip">NIST</span><span class="chip">PICERL</span></div></div>
       </div>
     </div>
   </section>
@@ -85,9 +85,9 @@
       <h2 id="projects-h">Featured Projects</h2>
       <p class="lead">A few builds and experiments. Swap the placeholders with your repos and live demos.</p>
       <div class="grid cols-3 projects-grid">
-        <article class="card" aria-labelledby="p1-h"><h3 id="p1-h">LLM‑Routed Triage</h3><p>Multi‑LLM router that picks the right model for IOC extraction vs. summarization vs. classification.</p><div class="chips"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Docker</span></div><p><a href="#" class="btn" aria-label="GitHub for LLM Routed Triage">GitHub</a> <a href="#" class="btn ghost">Demo</a></p></article>
-        <article class="card" aria-labelledby="p2-h"><h3 id="p2-h">CICIDS2017 Lab</h3><p>Reproducible pipeline to benchmark IDS models on CICIDS2017 with robust metrics & drift checks.</p><div class="chips"><span class="chip">PyTorch</span><span class="chip">MLflow</span></div><p><a href="#" class="btn">GitHub</a></p></article>
-        <article class="card" aria-labelledby="p3-h"><h3 id="p3-h">SOC Co‑Pilot</h3><p>Agentic assistant for SOC analysts with retrieval over playbooks, detections, and tickets.</p><div class="chips"><span class="chip">RAG</span><span class="chip">LangChain</span></div><p><a href="#" class="btn">GitHub</a> <a href="#" class="btn ghost">Case Study</a></p></article>
+        <article class="card" aria-labelledby="p1-h"><h3 id="p1-h">Simple SIEM for Home Network</h3><p></p><div class="chips"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Docker</span></div><p><a href="#" class="btn" aria-label="GitHub for LLM Routed Triage">GitHub</a> <a href="#" class="btn ghost">Demo</a></p></article>
+        <article class="card" aria-labelledby="p2-h"><h3 id="p2-h">Local Risk Analyzer – Vulnerability Detection Tool</h3><p></p><div class="chips"><span class="chip">PyTorch</span><span class="chip">MLflow</span></div><p><a href="#" class="btn">GitHub</a></p></article>
+        <article class="card" aria-labelledby="p3-h"><h3 id="p3-h">Digital Signature Tool</h3><p></p><div class="chips"><span class="chip">RAG</span><span class="chip">LangChain</span></div><p><a href="#" class="btn">GitHub</a> <a href="#" class="btn ghost">Case Study</a></p></article>
       </div>
     </div>
   </section>
@@ -100,8 +100,8 @@
         <div class="meta">Y Shrestha, K Ansari, A Aksoy <a href="https://ieeexplore.ieee.org/abstract/document/11050828/">PDF</a> • <a href="#">IEEE</a></div>
       </div>
       <div class="pub">
-        <div><strong>[2024]</strong>Automated Host Identification Using SSL/TLS Traffic with SHAP and Artificial Bee Colony<em>Workshop</em>.</div>
-        <div class="meta">Co‑authors… <a href="https://ieeexplore.ieee.org/abstract/document/11050492/">PDF</a> • <a href="#">ArXiv</a></div>
+        <div><strong>[2025]</strong>Automated Host Identification Using SSL/TLS Traffic with SHAP and Artificial Bee Colony<em>Workshop</em>.</div>
+        <div class="meta">A Aksoy, S Varma, K Ansari, Y Shrestha<a href="https://ieeexplore.ieee.org/abstract/document/11050492/"> PDF</a> • <a href="#">IEEE</a></div>
       </div>
     </div>
   </section>
@@ -111,20 +111,20 @@
       <h2 id="skills-h">Skills</h2>
       <div class="grid cols-2 skills-grid">
         <div class="skill-bucket">
-          <h3>Security</h3>
-          <div class="tags"><span class="tag">Threat Intel</span><span class="tag">Incident Response</span><span class="tag">Detection Eng</span><span class="tag">ATT&CK</span><span class="tag">Sigma</span></div>
+          <h3>Threat Intel & SOC</h3>
+          <div class="tags"><span class="tag">Threat Intel</span><span class="tag">Incident Response</span><span class="tag">SIEM (Datadog, ELK, Splunk)</span><span class="tag">ATT&CK</span><span class="tag">Cyber Kill Chain</span></div>
         </div>
         <div class="skill-bucket">
-          <h3>ML / LLM</h3>
-          <div class="tags"><span class="tag">PyTorch</span><span class="tag">Transformers</span><span class="tag">RAG</span><span class="tag">PEFT/LoRA</span><span class="tag">Evaluation</span></div>
+          <h3>Network Security</h3>
+          <div class="tags"><span class="tag">Wireshark</span><span class="tag">Scapy</span><span class="tag">ARP/DNS</span><span class="tag">Packet Manipulation</span><span class="tag">Evaluation</span></div>
         </div>
         <div class="skill-bucket">
-          <h3>Cloud / Dev</h3>
-          <div class="tags"><span class="tag">AWS</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">FastAPI</span><span class="tag">MLflow</span></div>
+          <h3>AI & LLMs</h3>
+          <div class="tags"><span class="tag">LLaMA fine-tuning</span><span class="tag">IoT fingerprinting</span><span class="tag">Explainable AI</span><span class="tag">RAG</span><span class="tag">classification</span></div>
         </div>
         <div class="skill-bucket">
           <h3>Languages</h3>
-          <div class="tags"><span class="tag">Python</span><span class="tag">Bash</span><span class="tag">JavaScript</span><span class="tag">SQL</span></div>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Bash</span></div>
         </div>
       </div>
     </div>
@@ -132,11 +132,15 @@
 
   <section id="experience" aria-labelledby="xp-h">
     <div class="container">
-      <h2 id="xp-h">Experience & Awards</h2>
+      <h2 id="xp-h">Experience & Awards</h2>OC
       <div class="timeline">
-        <div class="t-item"><strong>Research Assistant</strong> — University / Lab <span class="meta">(2025 — Present)</span><br/> Worked on LLM‑assisted threat intel extraction and dataset curation.</div>
-        <div class="t-item"><strong>Security Intern</strong> — Company <span class="meta">(2024)</span><br/> Built detections & dashboards for lateral movement patterns.</div>
-        <div class="t-item"><strong>Award</strong> — Scholarship / Competition <span class="meta">(2024)</span><br/> Recognition text…</div>
+        <div class="t-item"><strong>Research Assistant</strong> — University of Central Missouri / NetML Lab <span class="meta">(Aug 2024 — Present)</span><br/> research on network security, including TCP/IP packet analysis, IoT fingerprinting, incident detection 
+techniques aligned with SOC practices.</div>
+        <div class="t-item"><strong>Team Lead</strong> — Syvar Technology <span class="meta">(Apr 2022 - Dec 2023)</span><br/>Supervised a cross-functional team (15 members) to deliver seven security-focused projects on time and within budget. 
+        <br>Designed and delivered internal training on security policies, incident response, and secure coding practices, enhancing team 
+awareness</div>
+        <div class="t-item"><strong>Security Research Analyst</strong>— SecurityPal Inc.<span class="meta">(2024)</span><br/> Conducted over 200 third-party risk assessments questionnaires for Fortune 500 companies, ensuring compliance with ISO 
+27001, NIST CSF, GDPR, HIPAA, PCI-DSS, and CCPA standards. </div>
       </div>
     </div>
   </section>
@@ -151,10 +155,10 @@
           <span class="or">or find me here:</span>
         </p>
         <div class="socials" aria-label="Social links">
-          <a href="https://github.com/yourhandle" aria-label="GitHub">GitHub</a>
-          <a href="https://www.linkedin.com/in/yourhandle/" aria-label="LinkedIn">LinkedIn</a>
-          <a href="https://scholar.google.com/citations?user=XXXX" aria-label="Google Scholar">Scholar</a>
-          <a href="https://twitter.com/yourhandle" aria-label="X/Twitter">X</a>
+          <a href="https://github.com/yamanshrestha" aria-label="GitHub">GitHub</a>
+          <a href="https://www.linkedin.com/in/yaman-shrestha/" aria-label="LinkedIn">LinkedIn</a>
+          <a href="https://scholar.google.com/citations?user=moWnMlsAAAAJ" aria-label="Google Scholar">Google Scholar</a>
+          <!-- <a href="https://twitter.com/yourhandle" aria-label="X/Twitter">X</a> -->
         </div>
       </div>
       <div class="card" aria-label="Quick facts">
