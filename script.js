@@ -1,7 +1,7 @@
 
 (function(){
   const root = document.documentElement;
-  const current = localStorage.getItem('theme') || 'dark';
+  const current = localStorage.getItem('theme') || 'light';
   if(current === 'light') root.classList.add('light');
 
   const themeToggle = document.getElementById('themeToggle');
